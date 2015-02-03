@@ -1,0 +1,13 @@
+
+<div class="main-container" ng-model="divArray">
+	<div class="little-box" ng-repeat="box in divArray track by $id(box)" ng-hide="change[$index]">
+	</div>
+</div>
+
+<div class="typing-area">
+ 	<div class="quote-area">{{swansonQuote}}</div>
+<!--  	<input type="text" class="text-input" placeholder="Type here" ng-model="textInput" ng-change="gameCtrl.compareText()"></div> -->
+	<input type="text" class="text-input" ng-model="textInput" ng-trim="false" placeholder="Type here" ng-change="compareQuote()"/>
+<!--  	<button class="reset" ng-click="divCtrl.testButton()">New Game</button>	
+ --> 	<button class="reset" ng-click="getSwanson()">Test Quote</button>
+</div>
